@@ -2,7 +2,7 @@
 
 ### Virtual meet is a Nodejs application which makes use of peerjs and socket.io to implement real time video call and chat in the meeting.
 
-Check out the website [here](https://hidden-harbor-41782.herokuapp.com/)
+### Check out the website [here](https://hidden-harbor-41782.herokuapp.com/)
 
 ## Installation
 
