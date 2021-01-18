@@ -33,7 +33,7 @@ navigator.mediaDevices.getUserMedia({
     let text = $('input');
 
     $('html').keydown((e) => {
-        if(e.which == 13 && text.val().length !== 0){+
+        if(e.which == 13 && text.val().length !== 0){
             socket.emit('message', text.val());
             text.val('')
         }
@@ -43,6 +43,11 @@ navigator.mediaDevices.getUserMedia({
         $('ul').append(`<li class='message'><b>user</b><br>${message}</li>`)
         scrollToBottom()
     })
+})
+
+
+socket.on('user-disconnected', userId => {
+  if (peers[userId]) peers[userId].close()
 })
 
 peer.on('open', id => {
