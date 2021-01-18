@@ -33,6 +33,4 @@ io.on('connection', socket => {
     })
 })
 
-server.listen(3000, () => {
-    console.log("Server started");
-});
+server.listen(process.env.PORT|| 3000);
